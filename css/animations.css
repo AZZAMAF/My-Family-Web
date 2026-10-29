@@ -1,0 +1,37 @@
+/* Interactive feedback; GSAP controls entrance and scroll motion in js/animations.js. */
+.logo-mark,
+.btn,
+.nav-link,
+.nav-toggle,
+.flinks a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .logo-mark,
+  .cta,
+  .btn,
+  .nav-link,
+  .flinks a,
+  .member,
+  .value,
+  .loading-mark,
+  .loading-track span {
+    animation: none;
+    transition: none;
+  }
+
+  .loading-track span {
+    transform: translateX(165%);
+  }
+
+  .loading-screen {
+    animation-duration: 1ms;
+    animation-delay: 1200ms;
+    transition: none;
+  }
+}
